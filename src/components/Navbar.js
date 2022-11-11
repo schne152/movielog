@@ -1,5 +1,6 @@
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { NavLink } from 'react-router-dom'
 
 const navigation = [
   { name: 'Search', href: '/search', current: true },
@@ -36,12 +37,11 @@ export default function Navbar() {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
+                      <NavLink
+                        to={item.href}
                       >
                         {item.name}
-                      </a>
+                      </NavLink>
                     ))}
                   </div>
                 </div>
@@ -50,18 +50,13 @@ export default function Navbar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="text-primary space-y-1 px-4 pt-2 pb-3">
+            <div className="flex flex-col text-left text-primary space-y-1 px-4 pt-2 pb-3">
               {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    'block py-2 text-left'
-                  )}
+                <NavLink
+                  to={item.href}
                 >
                   {item.name}
-                </Disclosure.Button>
+                </NavLink>
               ))}
             </div>
           </Disclosure.Panel>

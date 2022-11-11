@@ -10,21 +10,21 @@ import SearchResults from './pages/SearchResults';
 
 function App() {
   return (
-    <div className="App">
-      <div className="content">
-      <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path='/search' element={<Search />}/>
-          <Route path='/my_reviews' element={<Reviews />}/>
-          <Route path='/login' element={<Login />}/>
-          <Route path='/create_account' element={<Register />}/>
-          <Route path='/search_results' element={<SearchResults />}/>
-        </Routes>
-      </BrowserRouter>
-      <Footer/>
+    <BrowserRouter>
+      <div className="App flex flex-col min-h-screen">
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route path='/search' element={<SearchResults />}/>
+            <Route path='/my_reviews' element={<Reviews />}/>
+            <Route path='/login' element={<Login />}/>
+            <Route path='/create_account' element={<Register />}/>
+            <Route path='/search_results' element={<SearchResults />}/>
+          </Routes>
+        </div>
+        <Footer/>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

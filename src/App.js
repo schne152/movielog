@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Footer from './components/Footer';
 import SearchResults from './pages/SearchResults';
+import MovieDetails from './pages/MovieDetails';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path='/login' element={<Login />}/>
             <Route path='/create_account' element={<Register />}/>
             <Route path='/search_results' element={<SearchResults />}/>
+            <Route path='/movie_details' element={<MovieDetails />}/>
           </Routes>
         </div>
         <Footer/>

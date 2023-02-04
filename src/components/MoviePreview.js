@@ -5,8 +5,8 @@ export default function MoviePreview(props) {
     const image = props.movie.image;
 
   return (
-    <a href='/login' >
-        <div href="/" className='flex flex-row items-center'>
+    <a href='/movie_details' >
+        <div className='flex flex-row items-center'>
             <img className="w-28" src={image} alt="" />
             <p className="pl-4 text-primary">{title}</p>
         </div>

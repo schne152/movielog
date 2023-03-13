@@ -55,5 +55,4 @@ const SearchResults = () => {
     </div>
   )
 }
-
 export default SearchResults

@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 const navigation = [
   { name: 'Search', href: '/search', current: true },
   { name: 'My Reviews', href: '/my_reviews', current: false },
+  { name: 'My Account', href: '/my_account', current: false },
 ]
 
 function classNames(...classes) {
